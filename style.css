@@ -308,7 +308,11 @@ footer h1 {
   gap: 1rem;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1220px) {
+  header {
+    margin-top: 0;
+  }
+
   .content-top-header ul {
     width: 25rem;
   }
@@ -356,7 +360,9 @@ footer h1 {
 
   @media (max-width: 780px) {
     header {
+      margin-top: 0;
       background-image: url(./assets/firstCropImg.png);
+      background-position: center;
     }
 
     .content-top-header {
@@ -416,15 +422,21 @@ footer h1 {
 }
 
 @media (max-width: 480px) {
-  .contentHeader {
-    padding: 2rem;
+  html {
+    font-size: 85%;
+  }
+
+  header {
+    padding: 1rem;
+    background-position: center;
+    margin-top: 0;
   }
 
   .contentHeader button {
     padding: 1rem 1.5rem;
   }
   .photoBox {
-    width: 300px;
+    width: 320px;
   }
 
   .sectionTwo {
