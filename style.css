@@ -16,7 +16,7 @@ html {
   font-family: "Roboto", helvetica, sans-serif;
 }
 
-.content-top-header {
+.contentTopHeader {
   display: flex;
   height: 100px;
   width: 100%;
@@ -58,10 +58,9 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 600px;
   max-width: 1220px;
-
   background-image: url(./assets/fundo-header.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,6 +104,11 @@ button {
   height: 64px;
   justify-content: space-between;
 }
+
+.photoBox img {
+  width: 100%;
+}
+
 .smallBox {
   padding: 1.5rem;
   text-align: center;
@@ -313,7 +317,7 @@ footer h1 {
     margin-top: 0;
   }
 
-  .content-top-header ul {
+  .contentTopHeader ul {
     width: 25rem;
   }
 
@@ -338,7 +342,6 @@ footer h1 {
 
   .photosContent {
     display: flex;
-
     justify-content: center;
   }
 
@@ -362,20 +365,19 @@ footer h1 {
     header {
       margin-top: 0;
       background-image: url(./assets/firstCropImg.png);
-      background-position: center;
-    }
-
-    .content-top-header {
-      height: 50%;
-      flex-direction: column;
-      gap: 2rem;
     }
 
     header .carter {
       color: #fff;
     }
 
-    .content-top-header nav ul {
+    .contentTopHeader {
+      height: 50%;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contentTopHeader nav ul {
       flex-direction: column;
     }
 
@@ -383,13 +385,13 @@ footer h1 {
       justify-content: center;
     }
 
-    .sectionOne .content {
-      flex-direction: column;
-      align-items: center;
+    .smallBox {
+      padding: 1.5rem 0;
+      font-size: 0.8rem;
     }
 
-    .contentSectionTwo .partials {
-      flex-direction: column;
+    .description img {
+      width: 100%;
     }
 
     .sideContent {
@@ -407,6 +409,7 @@ footer h1 {
       width: 50%;
       gap: 1rem;
     }
+
     .photosContent #p1,
     #p2,
     #p3 {
@@ -422,10 +425,6 @@ footer h1 {
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 85%;
-  }
-
   header {
     padding: 1rem;
     background-position: center;
@@ -435,12 +434,20 @@ footer h1 {
   .contentHeader button {
     padding: 1rem 1.5rem;
   }
+  .sectionOne .content {
+    flex-direction: column;
+    align-items: center;
+  }
   .photoBox {
     width: 320px;
   }
 
   .sectionTwo {
     margin: 2rem 0;
+  }
+
+  .partials {
+    flex-direction: column;
   }
 
   .description {
@@ -461,6 +468,6 @@ footer h1 {
 
 @media (max-width: 320px) {
   .photoBox {
-    width: 290px;
+    width: 270px;
   }
 }
