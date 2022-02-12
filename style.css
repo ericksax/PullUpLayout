@@ -107,6 +107,7 @@ button {
 
 .photoBox img {
   width: 100%;
+  height: 100%;
 }
 
 .smallBox {
@@ -114,7 +115,14 @@ button {
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  width: 100%;
+  border-radius: inherit;
   background-color: #c67306bf;
+  transition: 0.2s;
+}
+
+.smallBox:hover {
+  filter: brightness(0.9);
 }
 
 .photoBox {
@@ -136,7 +144,7 @@ button {
   position: relative;
   width: 100vw;
   max-width: 1220px;
-  height: auto;
+  height: 400pxpx;
   margin: 0 auto;
   flex-direction: column;
   display: flex;
