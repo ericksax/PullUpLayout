@@ -51,6 +51,27 @@ html {
   border-bottom: 2px solid white;
 }
 
+.contentFooter {
+  display: flex;
+  background: transparent;
+  flex-direction: row;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  padding: 10rem;
+}
+
+.contentFooter button {
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  border-radius: 8px;
+}
+
 .carousel-indicators {
   width: 80px;
   height: 20px;
@@ -210,6 +231,7 @@ header {
 }
 
 .sectionThre {
+  position: relative;
   font-family: "Blinker", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -218,6 +240,21 @@ header {
   width: 100vw;
   max-width: 1260px;
   height: auto;
+}
+
+.buttonSale {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 50px;
+}
+
+.sectionThre .buttonSale button {
+  background: black;
+  padding: 0.5rem 3rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .text {
@@ -399,6 +436,10 @@ footer a {
       display: inherit;
     }
 
+    .contentFooter {
+      display: none;
+    }
+
     .cartImg {
       display: none;
     }
@@ -406,11 +447,19 @@ footer a {
     .contentTopHeader ul {
       display: none;
     }
+
+    .sectionThre .buttonSale {
+      display: none;
+    }
   }
 
   @media (max-width: 780px) {
     header .carter {
       color: #fff;
+    }
+
+    .contentFooter {
+      padding: 6rem;
     }
 
     .smallBox {
