@@ -16,34 +16,55 @@ html {
   font-family: "Roboto", helvetica, sans-serif;
 }
 
+.headerMobile {
+  display: none;
+}
+
 .contentTopHeader {
+  position: absolute;
+  top: 0;
   display: flex;
-  height: 100px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem;
+  padding: 2.3rem 6rem 0 4rem;
+  z-index: 2;
 }
 
-ul {
+.contentTopHeader ul {
   display: flex;
-  align-items: center;
-  height: 50px;
-  width: 30rem;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 30rem;
+  margin-bottom: 0;
 }
 
-li {
-  height: 30px;
-  line-height: 30px;
+.contentTopHeader ul a {
+  text-decoration: none;
+  color: inherit;
 }
 
-header li:hover {
-  border-bottom: solid 2px #fff;
+.contentTopHeader ul a:hover {
+  color: white;
+  height: 0.5rem;
+  border-bottom: 2px solid white;
+}
+
+.carousel-indicators {
+  width: 80px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.activeMenu {
+  display: none;
 }
 
 .logo {
+  font-family: Rozha one, helvetica, sans-serif;
   font-weight: bolder;
+  line-height: 20px;
   font-size: 2rem;
 }
 
@@ -52,70 +73,37 @@ header li:hover {
   cursor: pointer;
   right: 30px;
   top: 38px;
+  z-index: 3;
 }
 
 header {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 600px;
-  max-width: 1220px;
-  background-image: url(./assets/fundo-header.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 100%;
   overflow: hidden;
   color: #fff;
-  margin: 1rem auto;
   line-height: 1;
   width: 100vw;
 }
 
-header .logo {
-  font-family: Rozha one, Helvetica, Arial, sans-serif;
-}
-
-.shopNow {
+.smallBoxContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.contentHeader {
-  display: flex;
-  height: 500px;
-  padding: 6rem;
+  flex-direction: row;
+  padding: 0 0.5rem;
   width: 100%;
+  max-width: 1220px;
 }
 
-button {
-  background: transparent;
-  margin-top: 1.2rem;
-  padding: 1rem 3rem;
-  border: solid 1px #fff;
-  border-radius: 0.5rem;
-}
-
-.topBoxes {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-  height: 64px;
-  justify-content: space-between;
-}
-
-.photoBox img {
-  width: 100%;
-  height: 100%;
+.smallBox + .smallBox {
+  margin-left: 1rem;
 }
 
 .smallBox {
   padding: 1.5rem;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100%;
+  border: none;
   border-radius: inherit;
   background-color: #c67306bf;
   transition: 0.2s;
@@ -125,11 +113,25 @@ button {
   filter: brightness(0.9);
 }
 
+.photoBoxContainer {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+}
+
 .photoBox {
   position: relative;
+  width: 100%;
+  padding: 0.5rem;
   overflow: hidden;
   margin: 0.5rem;
-  background-color: #fff;
+}
+
+.photoBox img {
+  width: 100%;
+  height: 100%;
 }
 
 .offer1 {
@@ -141,13 +143,10 @@ button {
 }
 
 .sectionOne {
-  position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1220px;
-  height: 400pxpx;
+  height: 100%;
   margin: 0 auto;
-  flex-direction: column;
-  display: flex;
 }
 
 .sectionOne .content {
@@ -162,6 +161,7 @@ button {
   color: #fff;
   font-size: 1.5rem;
   position: absolute;
+  line-height: 1px;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -260,6 +260,7 @@ button {
   align-items: center;
   padding: 2rem;
 }
+
 .sideContent div {
   display: flex;
   flex-direction: column;
@@ -267,9 +268,6 @@ button {
   justify-content: center;
   max-width: 16rem;
   height: 100%;
-}
-
-.sideContent p {
   text-align: center;
 }
 
@@ -310,8 +308,38 @@ footer {
   background: #c4c4c430;
 }
 
+footer a {
+  transition: 0.2s;
+}
+
+footer a:hover {
+  color: black;
+  text-shadow: 0 0 0.5px black;
+}
+
 footer h1 {
   font-family: Rozha one, helvetica, sans-serif;
+}
+
+.linksUtils {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.linksUtils ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .medias {
@@ -321,14 +349,6 @@ footer h1 {
 }
 
 @media (max-width: 1220px) {
-  header {
-    margin-top: 0;
-  }
-
-  .contentTopHeader ul {
-    width: 25rem;
-  }
-
   .contentSectionTwo {
     flex-direction: column;
     align-items: center;
@@ -369,28 +389,28 @@ footer h1 {
     width: 45%;
   }
 
-  @media (max-width: 780px) {
-    header {
-      margin-top: 0;
-      background-image: url(./assets/firstCropImg.png);
+  @media (max-width: 680px) {
+    .activeMenu {
+      position: absolute;
+      top: 30px;
+      right: 56.8px;
+      width: 30px;
+      height: 30px;
+      display: inherit;
     }
 
+    .cartImg {
+      display: none;
+    }
+
+    .contentTopHeader ul {
+      display: none;
+    }
+  }
+
+  @media (max-width: 780px) {
     header .carter {
       color: #fff;
-    }
-
-    .contentTopHeader {
-      height: 50%;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .contentTopHeader nav ul {
-      flex-direction: column;
-    }
-
-    .contentHeader {
-      justify-content: center;
     }
 
     .smallBox {
@@ -399,7 +419,7 @@ footer h1 {
     }
 
     .description img {
-      width: 100%;
+      width: 60%;
     }
 
     .sideContent {
@@ -427,27 +447,70 @@ footer h1 {
     }
   }
 
-  footer ul {
+  .linksUtils ul {
     padding: 0 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  header {
-    padding: 1rem;
-    background-position: center;
-    margin-top: 0;
+@media (max-width: 425px) {
+  header div {
+    display: none;
   }
 
+  .headerMobile {
+    display: flex;
+    background: #88888830;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .headerMobile main h2 {
+    margin: 0;
+    color: black;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  main img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(74, 74, 74);
+  }
+}
+
+@media (max-width: 480px) {
   .contentHeader button {
     padding: 1rem 1.5rem;
   }
+
   .sectionOne .content {
     flex-direction: column;
+  }
+
+  .photoBoxContainer {
+    max-width: 380px;
+  }
+
+  .content {
     align-items: center;
   }
+
   .photoBox {
-    width: 320px;
+    width: 380px;
   }
 
   .sectionTwo {
@@ -467,7 +530,15 @@ footer h1 {
     padding: 0 2rem;
     margin: 2rem auto;
   }
-  footer ul {
+
+  .linksutils {
+    align-items: center;
+    text-align: center;
+  }
+
+  .linksUtils ul {
+    text-align: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -476,6 +547,6 @@ footer h1 {
 
 @media (max-width: 320px) {
   .photoBox {
-    width: 270px;
+    width: 100%;
   }
 }
