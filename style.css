@@ -19,6 +19,7 @@ html {
 .headerMobile {
   display: none;
 }
+
 header {
   width: 100%;
   max-width: 1220px;
@@ -30,6 +31,12 @@ header {
   margin: 0 auto;
   width: 100%;
   max-width: 1220px;
+}
+
+.carousel-indicators button {
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50%;
 }
 
 .contentTopHeader {
