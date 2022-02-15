@@ -19,12 +19,27 @@ html {
 .headerMobile {
   display: none;
 }
+header {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+#carousel {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1220px;
+}
 
 .contentTopHeader {
   position: absolute;
   top: 0;
+  margin: 0 auto;
   display: flex;
+  height: 10%;
   width: 100%;
+  max-width: 1220px;
   justify-content: space-between;
   align-items: center;
   padding: 2.3rem 6rem 0 4rem;
@@ -55,9 +70,10 @@ html {
   display: flex;
   background: transparent;
   flex-direction: row;
-  margin: 0;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
+  max-width: 1220px;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
